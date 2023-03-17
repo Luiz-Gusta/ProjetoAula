@@ -156,7 +156,7 @@ header{
     border-bottom: 5px solid var(--decopri);
 }
 
-/*sliders*/
+/*banner sliders*/
 .banner{
     height: calc(100vh - 100px);
     background-color: #131313;
@@ -394,7 +394,7 @@ header{
 }
 
 .section-ourteam  .sliders{
-    width: calc(100vw + 4px);
+    width: 100%;
     height: 100%;
     display: inline-block;
     text-align: center;
@@ -422,11 +422,8 @@ header{
 .section-ourteam .section-body{
     padding: 50px;
     display: flex;
+    flex-wrap: wrap;
     justify-content: center;
-}
-
-.section-ourteam .slidearea{
-    padding: 0px 250px;
 }
 
 .section-ourteam .team-square{
@@ -457,6 +454,11 @@ header{
     cursor: pointer;
 }
 
+.team-square .icons .icone :hover{
+
+    background-color: var(--decopri);
+}
+
 .team-square .icone.active{
     background-color: var(--decopri);
 }
@@ -473,7 +475,7 @@ header{
 }
 
 .ourteam-pointers{
-    width: 100vw;
+    width: 100%;
     height: 20px;
     position: absolute;
     margin-top: -50px;
@@ -499,20 +501,44 @@ header{
     Happy Clients-----------------------------------------------------------------------
 */
 
-.happy-clients{
-    display:flow-root
+.testimonials .section-body{
+    max-width: initial;
+    max-height: 100vh;
+}
+.section-testimonials{
+    overflow: hidden;
 }
 
-.client{
+.section-testimonials .sliders{
+    width: 100vw;
+    height: 100%;
+}
+
+.section-testimonials .slide{
+    width: 100vw;
+    height: 100%;
+    display: inline-block;
+}
+
+.section-testimonials .slidearea{
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    justify-content: center;
+    align-items: center;
+}
+
+
+.section-testimonials .client{
     text-align: center;
 }
 
-.happy-clients .section-desc{
+.section-testimonials .section-desc{
     color: var(---descColorlight);
     font-size: small;
 }
 
-.happy-clients h1{
+.section-testimonials h1{
     margin-top: 15px;
 }
 
@@ -525,7 +551,7 @@ header{
 }
 
 .happy-clients p{
-    margin: 0px 250px;
+    margin: 10px 250px;
     color: var(--fgFiltroProj);
     font-size: small;
 }
