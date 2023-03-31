@@ -9,12 +9,12 @@ configurações gerais
     --decopri: #b28756;
     --corfont: #fff;
     --menusele: #d3d3d3;
-    ---descColorlight: #ccc;
-    ---bgDefLight: #f7f7f7;
-    ---descColor: #000;
-    ---titColorLight: #000;
-    ---bgDefDark: #000;
-    ---titColorDark: rgb(255, 255, 255);
+    --descColorlight: #ccc;
+    --bgDefLight: #f7f7f7;
+    --descColor: #000;
+    --titColorLight: #000;
+    --bgDefDark: #000;
+    --titColorDark: rgb(255, 255, 255);
     --textService: #999;
     --bgFiltroProj: #ebebeb;
     --fgFiltroProj: #5f5f5f;
@@ -54,7 +54,7 @@ body{
 
 .button--dark{
     display: inline-block;
-    background-color: var(---bgDefDark);
+    background-color: var(--bgDefDark);
     color: var(--corfont);
     text-transform: uppercase;
     font-size: 12px;
@@ -87,7 +87,7 @@ body{
 
 .default .section-desc{
     font-size: 12px;
-    color: var(---descColor);
+    color: var(--descColor);
     margin-top: 10px;
     margin-bottom: 40px;
 }
@@ -107,11 +107,15 @@ body{
 }
 
 .default.dark {
-    background-color: var(---bgDefDark);
+    background-color: var(--bgDefDark);
 }
 
 .default.dark .section-title {
-    color: var(---titColorDark);
+    color: var(--titColorDark);
+}
+
+.default.dark .section-desc{
+    color: var(--descColorlight);
 }
 
 /*cabeçalho*/
@@ -267,7 +271,7 @@ header{
 }
 
 /*
-    Section - Services ----------------------------------------------------------------------------------------------
+    Section - Services ---------------------------------------------------------------
 */
 
 .section-services{
@@ -300,7 +304,7 @@ header{
 }
 
 /*
-    Section - Projects--------------------------------------------------------------------------------------------
+    Section - Projects--------------------------------------------------------------
 */
 .section-projects {
     display: flex;
@@ -394,7 +398,7 @@ header{
 }
 
 /*
-    Our Team ---------------------------------------------------------------------------------------------
+    Our Team --------------------------------------------------------------
 */
 
 .section-ourteam{
@@ -427,7 +431,7 @@ header{
 }
 
 .section-ourteam .section-desc{
-    color: var(---descColorlight);
+    color: var(--descColorlight);
     text-transform: uppercase;
     font-size: small;
 }
@@ -440,8 +444,8 @@ header{
 }
 
 .section-ourteam .team-square{
-    color: var(---titColorLight);
-    background-color: var(---bgDefLight);
+    color: var(--titColorLight);
+    background-color: var(--bgDefLight);
     height:400px;
     width: 350px;
     text-align: center;
@@ -507,7 +511,7 @@ header{
 }
 
 /*
-    Happy Clients-----------------------------------------------------------------------
+    Happy Clients------------------------------------------------
 */
 
 .testimonials .section-body{
@@ -543,7 +547,7 @@ header{
 }
 
 .section-testimonials .section-desc{
-    color: var(---descColorlight);
+    color: var(--descColorlight);
     font-size: small;
 }
 
@@ -617,7 +621,7 @@ header{
 
 .section-prince--item{
     flex: 1;
-    background-color: var(---bgDefLight);
+    background-color: var(--bgDefLight);
     margin-right: 20px;
     padding: 20px;
     text-align: center;
@@ -725,7 +729,7 @@ header{
 }
 
 .section-premium--item div h4{
-    color: var(---titColorLight);
+    color: var(--titColorLight);
     font-size: 17px;
     font-weight: 600;
 }
@@ -751,4 +755,155 @@ header{
 
 .section-premium .pointer.active{
     background-color: var(--decopri);
+}
+
+/*
+    section - facts
+*/
+
+.section-facts{
+    display: flex;
+}
+
+.section-fact{
+    flex:1;
+    text-align: center;
+    padding: 5px;
+}
+
+.section-fact h3{
+    color: var(--decopri);
+    font-size: 45px;
+    margin-bottom: 10px;
+}
+
+.section-fact-line{
+    width: 20px;
+    border-bottom: 3px solid var(--decopri);
+    margin:auto;
+}
+
+.section-fact h4{
+    margin-top: 5px;
+    text-transform: uppercase;
+    font-size:18px;
+    color: var(--bgDefLight);
+}
+
+.section-fact{
+    margin-top: 5px;
+    font: size 13px;
+    color: var(--textService);
+}
+
+/*
+    Section - Share
+*/
+
+.section-share{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+    background-color: var(--fgColor);
+    color: var(--textService);
+}
+
+.section-share--legend{
+    display: flex;
+    justify-content:center;
+    align-items: center;
+    margin-right: 40px;
+}
+
+.section-share--legend img{
+    margin-right: 10px;
+}
+
+.section-share--item{
+    font-size: 12px;
+    margin-right: 20px;
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+}
+
+.section-share--icon{
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    background-color: var(--destaMenu);
+    margin-right: 5px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.section-share--icon img{
+    height: 12px;
+}
+
+.section-share--icon.twitter{
+    background-color: #34c5f0;
+}
+
+.section-share--icon.linkedin{
+    background-color: #127cb4;
+}
+
+.section-share--icon.facebook{
+    background-color: #135caa;
+}
+
+.section-share--icon.googleplus{
+    background-color: #e74237;
+}
+
+.section-share--icon.pinterest{
+    background-color: #b71c29;
+}
+
+.section-share--icon:hover{
+    padding: 0px 5px 5px 0px;
+    box-shadow: 1px 1px 5px rgba(0, 0, 0, 0.5);
+}
+
+/*
+    Section - Contact
+*/
+
+.section-contact{
+    max-width: 450px;
+    margin: auto;
+    text-align:center;
+}
+
+.section-contact input[type=text], .section-contact textarea{
+    display: block;
+    width: 100%;
+    height: 40px;
+    border: 0;
+    background: transparent;
+    border-bottom: 1px solid var(--destaMenu);
+    outline: 0;
+    margin-top: 10px
+}
+
+.section-contact textarea{
+    height: 100px;
+    resize: none;
+}
+
+.section-contact--split{
+    display: flex;
+}
+
+.section-contact--split input:first-child{
+    margin-right: 20px;
+}
+
+.section-contact input[type=submit]{
+    border: 0px;
+    box-shadow: 1px 1px 5px rgba(0, 0, 0, 0.5);
+    cursor: pointer;
 }
