@@ -1024,3 +1024,17 @@ header{
     text-align: center;
 
 }
+
+.footer .button{
+    border: none;
+    box-shadow: 1px 1px 5px rgba(0, 0, 0, 0.5);
+    cursor: pointer;
+}
+
+/*
+    Ajuste de Responsividade
+*/
+
+@media (min-width:450px) and (max-width: 800px){
+    
+}
